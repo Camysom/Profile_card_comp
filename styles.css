@@ -1,0 +1,135 @@
+:root {
+    --clr-primary-200: hsla(227, 10%, 46%, 0.25);
+    --clr-primary-400: hsl(185, 75%, 39%);
+    --clr-primary-700: hsl(229, 23%, 23%);
+    
+    --clr-neutral-100: hsl(0, 0%, 59%);
+
+    --font-primary: 'Kumbh Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--clr-primary-400);
+    font-family: var(--font-primary);
+    min-width: 370px;
+    padding-inline-end: 0px 5px 0px 5px;
+}
+
+#up_img {
+    width: 50em;
+    position: fixed;
+    top: -25em;
+    left: -29em;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+#down_image {
+    width: 50em;
+    position: fixed;
+    bottom: -28em;
+    right: -29em;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+@media screen and (min-width: 1000px) {
+    #up_img {
+        width: 70em;
+        position: fixed;
+        top: -40em;
+        left: -10em;
+        z-index: 1;
+        opacity: 0.4;
+    }
+    
+    #down_image {
+        width: 70em;
+        position: fixed;
+        bottom: -40em;
+        right: -13em;
+        z-index: 1;
+        opacity: 0.4;
+    }
+}
+
+.main_wraper {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: white;
+    border-radius: 0.8em;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.up_back {
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 7.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#avatar {
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 50%;
+    bottom: -3rem;
+}
+
+.secondary_wraper {
+    padding-top: 4.1rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+#city {
+    padding: 0.5em 0em 1.5em 0em;
+    border-bottom: 1px solid var(--clr-primary-200);
+}
+
+.stat_box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.4em 0em;
+}
+
+.number {
+    padding-bottom: 0.3rem;
+}
+
+h1, .number {
+    font-weight: 700;
+}
+
+#age, #city, .stat_name {
+    font-weight: 400;
+    color: var(--clr-neutral-100);
+}
+
+#city {
+    font-size: 0.8rem;
+}
+
+.stat_name {
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
